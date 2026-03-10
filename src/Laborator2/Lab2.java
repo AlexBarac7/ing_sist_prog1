@@ -1,0 +1,28 @@
+package Laborator2;
+
+import java.util.*;
+
+public class Lab2 {
+    public static void main (String[] args){
+            List<Integer> x = new ArrayList();
+            List<Integer> y = new ArrayList();
+            List<Integer> xPlusY = new ArrayList(); //a
+            Set<Integer> zSet = new TreeSet(); //b
+            List<Integer> xMinusY = new ArrayList();//c
+            int p = 4;
+            List<Integer> xPlusYLimitedByP = new ArrayList();
+            Random rand = new Random();
+            for (int i = 0; i < 5; i++) {
+                x.add(rand.nextInt(10));
+            }
+            for (int j=0; j<7; j++){
+                y.add(rand.nextInt(10));
+            }
+            System.out.println(x);
+            System.out.println(y);
+            Collections.sort(x);
+            System.out.println(x);
+            Collections.sort(y);
+            System.out.println(y);
+        }
+    }
