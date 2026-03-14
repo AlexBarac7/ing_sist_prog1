@@ -21,5 +21,6 @@ public class Application {
         System.out.println(contine1);
         boolean contine2 = students.contains(new Student(112,"Maria","Popa","TI21/2"));
         System.out.println(contine2);
+        System.out.println("test");
     }
 }
