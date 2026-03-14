@@ -10,6 +10,7 @@ public class Student {
     }
     @Override
     public String toString() {
+
         return prenume +  " " + nume + "\n" + "Grupa: " + formatieDeStudiu + "\n" +  "Nr matricol: " + nrMatricol;
     }
 }
