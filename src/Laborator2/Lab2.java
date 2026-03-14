@@ -40,5 +40,6 @@ public class Lab2 {
                 if (xPlusY.get(i)< p)
                     xPlusYLimitedByP.add(xPlusY.get(i));
             System.out.println(xPlusYLimitedByP);
+            System.out.println("test");
         }
     }
