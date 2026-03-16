@@ -21,6 +21,5 @@ public class Application {
         System.out.println(exista);
         exista = students.contains(new Student(112,"Maria","Popa","TI21/2"));
         System.out.println(exista);
-
     }
 }

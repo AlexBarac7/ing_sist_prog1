@@ -19,6 +19,8 @@ public class Student {
     public boolean equals(Object obj) {
         if (this == obj)
             return true;
+        if (obj == null)
+            return false;
         return this.prenume.equals(((Student)obj).prenume) && this.nume.equals(((Student)obj).nume) &&  this.formatieDeStudiu.equals(((Student)obj).formatieDeStudiu);
     }
     @Override
