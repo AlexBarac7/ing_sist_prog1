@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Student {
     int nrMatricol;
     String prenume, nume;
@@ -18,5 +20,9 @@ public class Student {
         if (this == obj)
             return true;
         return this.prenume.equals(((Student)obj).prenume) && this.nume.equals(((Student)obj).nume) &&  this.formatieDeStudiu.equals(((Student)obj).formatieDeStudiu);
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(prenume, nume, formatieDeStudiu);
     }
 }
