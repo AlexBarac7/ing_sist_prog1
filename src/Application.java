@@ -17,10 +17,10 @@ public class Application {
         for (int i=0;i<students.size();i++){
             System.out.println(students.get(i));
         }
-        boolean contine1 = students.contains(new Student(120,"Alis","Popa","TI21/2"));
-        System.out.println(contine1);
-        boolean contine2 = students.contains(new Student(112,"Maria","Popa","TI21/2"));
-        System.out.println(contine2);
-        System.out.println("teste");
+        boolean exista = students.contains(new Student(120,"Alis","Popa","TI21/2"));
+        System.out.println(exista);
+        exista = students.contains(new Student(112,"Maria","Popa","TI21/2"));
+        System.out.println(exista);
+
     }
 }

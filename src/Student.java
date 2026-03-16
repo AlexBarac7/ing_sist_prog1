@@ -13,4 +13,10 @@ public class Student {
 
         return prenume +  " " + nume + "\n" + "Grupa: " + formatieDeStudiu + "\n" +  "Nr matricol: " + nrMatricol;
     }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        return this.prenume.equals(((Student)obj).prenume) && this.nume.equals(((Student)obj).nume) &&  this.formatieDeStudiu.equals(((Student)obj).formatieDeStudiu);
+    }
 }
