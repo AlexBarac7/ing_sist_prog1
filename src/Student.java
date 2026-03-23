@@ -25,7 +25,7 @@ public class Student {
     @Override
     public String toString() {
 
-        return prenume +  " " + nume + "\n" + "Grupa: " + formatieDeStudiu + "\n" +  "Nr matricol: " + nrMatricol;
+        return prenume +  " " + nume + " " + formatieDeStudiu + " " + nrMatricol + "\n";
     }
     @Override
     public boolean equals(Object obj) {

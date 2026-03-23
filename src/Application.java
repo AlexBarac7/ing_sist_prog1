@@ -18,23 +18,35 @@ void main() {
     students.add(s4);
     students.add(s5);
     for (int i = 0; i < students.size(); i++) {
-        IO.println(students.get(i));
+        IO.print(students.get(i));
     }
     boolean exista = students.contains(new Student(120, "Alis", "Popa", "TI21/2"));
     IO.println(exista);
     exista = students.contains(new Student(112, "Maria", "Popa", "TI21/2"));
     IO.println(exista);
     File file = new File("studenti_in.txt");
-    List<String> studenti = new ArrayList<>();
+
+    List<Student> studenti = new ArrayList<>();
     try (Scanner sc = new Scanner(file)) {
         while (sc.hasNextLine()) {
             String line = sc.nextLine();
+            String[] elemente =  line.split(",");
             System.out.println(line);
-            studenti.add(line);
+            int nrMatricol = Integer.parseInt(elemente[0]);
+            String prenume = elemente[1];
+            String nume = elemente[2];
+            String grupa = elemente[3];
+            Student  student = new Student(nrMatricol, prenume, nume, grupa);
+            studenti.add(student);
         }
-        Collections.sort(studenti);
         try{
-            writeSmallTextFile(studenti, "studenti_out.txt");
+            FileWriter fw = new FileWriter("studenti_out.txt");
+            studenti.sort(Comparator.comparing(Student::getNume));
+            fw.write(studenti.toString());
+            studenti.sort(Comparator.comparing(Student::getFormatieDeStudiu).thenComparing(Student::getNume));
+            fw.write("\n");
+            fw.write(studenti.toString());
+            fw.close();
         }
         catch (IOException e) {
             e.printStackTrace();
