@@ -17,28 +17,27 @@ public class lab3 {
             while (sc.hasNextLine()) {
                 String line = sc.nextLine();
                 String[] linii = line.split("\n");
+                String[] puncte = line.split("\\.");
                 for (String l : linii)
                     lista_linii.add(l);
-                for (String s1 : lista_linii){
-                    String nou1 = s1 + "\n";
-                    System.out.print(nou1);
-                }
-
-                String[] puncte = line.split("\\.");
-                for (String p : puncte){
+                for (String p : puncte) {
                     lista_puncte.add(p);
                 }
-                for (String s2 : lista_puncte){
-                    String nou2 = s2 + "\n";
-                    System.out.print(nou2);
-                }
-                try{
-                    writeSmallTextFile(lista_linii, "out.txt");
-                    writeSmallTextFile(lista_puncte, "out.txt");
-                }
-                catch (IOException e) {
-                    e.printStackTrace();
-                }
+            }
+            for (String s1 : lista_linii){
+                String nou1 = s1 + "\n";
+                System.out.print(nou1);
+            }
+            for (String s2 : lista_puncte){
+                String nou2 = s2 + "\n";
+                System.out.print(nou2);
+            }
+            try{
+                writeSmallTextFile(lista_linii, "out.txt");
+                writeSmallTextFile(lista_puncte, "out.txt");
+            }
+            catch (IOException e) {
+                e.printStackTrace();
             }
         }
         catch (FileNotFoundException e){

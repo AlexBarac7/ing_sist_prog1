@@ -10,6 +10,18 @@ public class Student {
         this.nume = nume;
         this.formatieDeStudiu = formatieDeStudiu;
     }
+    public int getNrMatricol() {
+        return nrMatricol;
+    }
+    public String getPrenume() {
+        return prenume;
+    }
+    public String getNume() {
+        return nume;
+    }
+    public String getFormatieDeStudiu() {
+        return formatieDeStudiu;
+    }
     @Override
     public String toString() {
 
