@@ -7,6 +7,15 @@ import java.util.stream.Stream;
 import java.util.Scanner;
 
 public class AppLab4 {
+    public static float gasesteNota(String prenume, String nume, HashMap<Integer, Studenti> tineri) {
+        for (Studenti s : tineri.values()) {
+            if (s.getPrenume().equals(prenume) && s.getNume().equals(nume)) {
+                return s.getNota();
+            }
+        }
+        return 0.0f;
+    }
+
     public static void main() {
         HashMap<String, Integer> varste = new HashMap<>();
         varste.put("Ioan", 21);
@@ -82,13 +91,5 @@ public class AppLab4 {
         System.out.println(notaM);
         System.out.println(notaN);
         System.out.println(notaP);
-    }
-    public static float gasesteNota(String prenume, String nume, HashMap<Integer, Studenti> tineri) {
-        for (Studenti s : tineri.values()) {
-            if (s.getPrenume().equals(prenume) && s.getNume().equals(nume)) {
-                return s.getNota();
-            }
-        }
-        return 0.0f;
     }
 }
