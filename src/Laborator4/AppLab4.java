@@ -76,5 +76,19 @@ public class AppLab4 {
         for (Studenti s : studenti.values()) {
             System.out.print(s);
         }
+        float notaM = gasesteNota("Bianca", "Popescu", studenti);
+        float notaN = gasesteNota("Ioan", "Popa", studenti);
+        float notaP = gasesteNota("Paul", "Mohanu", studenti);
+        System.out.println(notaM);
+        System.out.println(notaN);
+        System.out.println(notaP);
+    }
+    public static float gasesteNota(String prenume, String nume, HashMap<Integer, Studenti> tineri) {
+        for (Studenti s : tineri.values()) {
+            if (s.getPrenume().equals(prenume) && s.getNume().equals(nume)) {
+                return s.getNota();
+            }
+        }
+        return 0.0f;
     }
 }
