@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class lab3 {
     public static void main(String[] args) {
-        File file =  new File("in.txt");
+        File file =  new File("C:\\Users\\Alex\\Desktop\\ing.sist.prog1\\src\\Laborator3\\in.txt");
         List<String> lista_linii = new ArrayList<>();
         List<String> lista_puncte = new ArrayList<>();
         try (Scanner sc = new Scanner(file)) {
@@ -33,8 +33,8 @@ public class lab3 {
                 System.out.print(nou2);
             }
             try{
-                writeSmallTextFile(lista_linii, "out.txt");
-                writeSmallTextFile(lista_puncte, "out.txt");
+                writeSmallTextFile(lista_linii, "C:\\Users\\Alex\\Desktop\\ing.sist.prog1\\src\\Laborator3\\out.txt");
+                writeSmallTextFile(lista_puncte, "C:\\Users\\Alex\\Desktop\\ing.sist.prog1\\src\\Laborator3\\out.txt");
             }
             catch (IOException e) {
                 e.printStackTrace();
