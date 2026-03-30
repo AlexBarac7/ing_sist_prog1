@@ -1,10 +1,10 @@
 package Laborator4;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
+import java.io.File;
+import java.io.IOException;
+import java.util.*;
 import java.util.stream.Stream;
+import java.util.Scanner;
 
 public class AppLab4 {
     public static void main() {
@@ -38,6 +38,43 @@ public class AppLab4 {
         }
         for (Tanar t : tineri.values()) {
             System.out.println(t);
+        }
+        File file = new File("C:\\Users\\Alex\\Desktop\\ing.sist.prog1\\src\\Laborator4\\studenti_in.txt");
+        File fisier = new File("C:\\Users\\Alex\\Desktop\\ing.sist.prog1\\src\\Laborator4\\note_anon.txt");
+        HashMap<Integer, Studenti> studenti = new HashMap<>();
+        try (Scanner sc = new Scanner(file)) {
+            while (sc.hasNextLine()) {
+                String line = sc.nextLine();
+               // System.out.println(line);
+                String[] date = line.split(",");
+                int nrMat = Integer.parseInt(date[0]);
+                String prenume = date[1];
+                String nume = date[2];
+                String grupa = date[3];
+                Studenti st =  new Studenti(nrMat, prenume, nume, grupa);
+                studenti.put(nrMat, st);
+            }
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+        try (Scanner scanner = new Scanner(fisier)){
+            while (scanner.hasNextLine()) {
+                String ln = scanner.nextLine();
+                String[] note = ln.split(",");
+                int nrMat = Integer.parseInt(note[0]);
+                float nota = Float.parseFloat(note[1]);
+                Studenti st = studenti.get(nrMat);
+                if (st!=null) {
+                    st.setNota(nota);
+                }
+            }
+        }
+        catch (IOException e2) {
+            e2.printStackTrace();
+        }
+        for (Studenti s : studenti.values()) {
+            System.out.print(s);
         }
     }
 }
