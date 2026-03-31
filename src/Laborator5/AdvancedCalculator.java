@@ -21,4 +21,19 @@ public class AdvancedCalculator extends IntCalculator{
         this.state ^= (1/n);
         return this;
     }
+    @Override
+    public AdvancedCalculator add(int value){
+        super.add(value);
+        return this;
+    }
+    @Override
+    public AdvancedCalculator subtract(int value){
+        super.subtract(value);
+        return this;
+    }
+    @Override
+    public AdvancedCalculator multiply(int value){
+        super.multiply(value);
+        return this;
+    }
 }

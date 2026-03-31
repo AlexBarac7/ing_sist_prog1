@@ -11,8 +11,8 @@ public class AppLab5 {
         System.out.println("a) " + result);
         AdvancedCalculator calc = new AdvancedCalculator(10);
         int res = calc
-                .divide(2)
-                .power(2)
+                .add(90)
+                .divide(4)
                 .root(2)
                 .result();
 
