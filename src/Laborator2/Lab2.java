@@ -9,6 +9,7 @@ public class Lab2 {
             List<Integer> xPlusY = new ArrayList(); //a
             Set<Integer> zSet = new TreeSet(); //b
             List<Integer> xMinusY = new ArrayList();//c
+            List<Integer> Comune = new ArrayList();
             int p = 4;
             List<Integer> xPlusYLimitedByP = new ArrayList();
             Random rand = new Random();
@@ -24,5 +25,21 @@ public class Lab2 {
             System.out.println(x);
             Collections.sort(y);
             System.out.println(y);
+            xPlusY.addAll(x);
+            xPlusY.addAll(y);
+            Collections.sort(xPlusY);
+            System.out.println(xPlusY);
+            Comune.addAll(x);
+            Comune.retainAll(y);
+            zSet.addAll(Comune);
+            System.out.println(zSet);
+            xMinusY.addAll(x);
+            xMinusY.removeAll(y);
+            System.out.println(xMinusY);
+            for (int i=0; i<xPlusY.size(); i++)
+                if (xPlusY.get(i)< p)
+                    xPlusYLimitedByP.add(xPlusY.get(i));
+            System.out.println(xPlusYLimitedByP);
+            System.out.println("test");
         }
     }

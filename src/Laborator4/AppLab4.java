@@ -48,8 +48,6 @@ public class AppLab4 {
         for (Tanar t : tineri.values()) {
             System.out.println(t);
         }
-        File file = new File("C:\\Users\\Admin\\IdeaProjects\\ing_sist_prog1\\src\\Laborator4\\studenti_in.txt");
-        File fisier = new File("C:\\Users\\Admin\\IdeaProjects\\ing_sist_prog1\\src\\Laborator4\\note_anon.txt");
         HashMap<Integer, Studenti> studenti = new HashMap<>();
         try (Scanner sc = new Scanner(file)) {
             while (sc.hasNextLine()) {
