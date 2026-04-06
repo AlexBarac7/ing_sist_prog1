@@ -49,6 +49,8 @@ public class AppLab4 {
             System.out.println(t);
         }
         HashMap<Integer, Studenti> studenti = new HashMap<>();
+        File file = new File("C:\\Users\\Alex\\Desktop\\ing.sist.prog1\\src\\Laborator4\\studenti_in.txt");
+        File fisier = new File("C:\\Users\\Alex\\Desktop\\ing.sist.prog1\\src\\Laborator4\\note_anon.txt");
         try (Scanner sc = new Scanner(file)) {
             while (sc.hasNextLine()) {
                 String line = sc.nextLine();

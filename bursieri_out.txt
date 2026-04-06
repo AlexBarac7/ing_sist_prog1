@@ -1,0 +1,5 @@
+[Andrei Popa ISM141/2 1025  8.7 725.5
+, Ioan Mihalcea ISM141/1 1024  9.8 801.1
+, Anamaria Prodan TI131/1 1026  8.9 745.5
+, Bianca Popescu TI131/1, 1029  9.1 780.8
+]

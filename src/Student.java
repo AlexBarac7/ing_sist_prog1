@@ -1,9 +1,9 @@
 import java.util.Objects;
 
 public class Student {
-    int nrMatricol;
-    String prenume, nume;
-    String formatieDeStudiu;
+    protected int nrMatricol;
+    protected String prenume, nume;
+    protected String formatieDeStudiu;
     public Student(int nrMatricol, String prenume, String nume, String formatieDeStudiu) {
         this.nrMatricol = nrMatricol;
         this.prenume = prenume;

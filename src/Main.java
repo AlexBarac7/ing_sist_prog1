@@ -1,5 +1,15 @@
 void main() {
-        //Student s = new Student(572, "Alexandru", "Barac", "ISM 21/1");
-       // System.out.println(s);
+    List<StudentiBursieri> bursieri = new ArrayList<>();
+    bursieri.add(new StudentiBursieri(1025,"Andrei","Popa","ISM141/2", 8.70, 725.50));
+    bursieri.add( new StudentiBursieri(1024,"Ioan","Mihalcea","ISM141/1", 9.80, 801.10));
+    bursieri.add( new StudentiBursieri(1026,"Anamaria","Prodan","TI131/1", 8.90, 745.50));
+    bursieri.add( new StudentiBursieri(1029,"Bianca","Popescu","TI131/1,", 9.10, 780.80));
+    try{
+        FileWriter fw = new FileWriter("bursieri_out.txt");
+        fw.write(bursieri.toString());
+        fw.close();
     }
-
+    catch (IOException e) {
+        e.printStackTrace();
+    }
+}

@@ -12,6 +12,7 @@ public class lab3 {
     public static void main(String[] args) {
         List<String> lista_linii = new ArrayList<>();
         List<String> lista_puncte = new ArrayList<>();
+        File file =  new File("C:\\Users\\Alex\\Desktop\\ing.sist.prog1\\src\\Laborator3\\in.txt");
         try (Scanner sc = new Scanner(file)) {
             while (sc.hasNextLine()) {
                 String line = sc.nextLine();
@@ -32,6 +33,8 @@ public class lab3 {
                 System.out.print(nou2);
             }
             try{
+                writeSmallTextFile(lista_linii, "C:\\Users\\Alex\\Desktop\\ing.sist.prog1\\src\\Laborator3\\out.txt");
+                writeSmallTextFile(lista_puncte, "C:\\Users\\Alex\\Desktop\\ing.sist.prog1\\src\\Laborator3\\out.txt");
             }
             catch (IOException e) {
                 e.printStackTrace();

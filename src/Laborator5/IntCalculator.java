@@ -25,4 +25,3 @@ public class IntCalculator  {
         return this;
     }
 }
-
