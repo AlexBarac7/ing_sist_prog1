@@ -24,7 +24,7 @@ void main() {
     IO.println(exista);
     exista = students.contains(new Student(112, "Maria", "Popa", "TI21/2"));
     IO.println(exista);
-    File file = new File("C:\\Users\\Alex\\Desktop\\ing.sist.prog1\\src\\Laborator3\\studenti_in.txt");
+    File file = new File("studenti_in.txt");
 
     List<Student> studenti = new ArrayList<>();
     try (Scanner sc = new Scanner(file)) {
@@ -40,7 +40,7 @@ void main() {
             studenti.add(student);
         }
         try{
-            FileWriter fw = new FileWriter("C:\\Users\\Alex\\Desktop\\ing.sist.prog1\\src\\Laborator3\\studenti_out.txt");
+            FileWriter fw = new FileWriter("studenti_out.txt");
             studenti.sort(Comparator.comparing(Student::getNume));
             fw.write(studenti.toString());
             studenti.sort(Comparator.comparing(Student::getFormatieDeStudiu).thenComparing(Student::getNume));
@@ -55,7 +55,6 @@ void main() {
     catch (Exception e) {
         e.printStackTrace();
     }
-
 }
 static void writeSmallTextFile(List<String> lines, String fileName) throws IOException {
     Path path = Paths.get(fileName);

@@ -9,12 +9,7 @@ public class AppLab5 {
                 .multiply(2)
                 .result();
         System.out.println("a) " + result);
-        AdvancedCalculator calc = new AdvancedCalculator(3);
         int res = calc
-                .subtract(2)
-                .power(10)
-                .add(26)
-                .root(3)
                 .result();
 
         System.out.println("b) " + res);

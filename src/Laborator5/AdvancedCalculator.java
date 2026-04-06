@@ -1,5 +1,4 @@
 package Laborator5;
-import java.lang.Math;
 
 public class AdvancedCalculator extends IntCalculator{
     public AdvancedCalculator(int val){
@@ -15,11 +14,9 @@ public class AdvancedCalculator extends IntCalculator{
         return this;
     }
     public AdvancedCalculator power(int value){
-        this.state = (int) Math.pow(this.state, value);
         return this;
     }
     public AdvancedCalculator root(int n){
-        this.state = (int) Math.pow(this.state, 1.0/n);
         return this;
     }
     @Override
