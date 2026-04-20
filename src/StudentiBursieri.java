@@ -8,6 +8,12 @@ public class StudentiBursieri extends Student{
         this.nota = nota;
         this.cuantumBursa = cuantumBursa;
     }
+    public double getNota() {
+        return nota;
+    }
+    public double getCuantumBursa() {
+        return cuantumBursa;
+    }
     @Override
     public String toString() {
 
