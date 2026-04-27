@@ -1,9 +1,10 @@
 import java.util.Objects;
 
 public class Student {
-    protected int nrMatricol;
-    protected String prenume, nume;
-    protected String formatieDeStudiu;
+    protected final int nrMatricol;
+    protected final String prenume;
+    protected final String nume;
+    protected final String formatieDeStudiu;
     public Student(int nrMatricol, String prenume, String nume, String formatieDeStudiu) {
         this.nrMatricol = nrMatricol;
         this.prenume = prenume;
