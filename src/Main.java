@@ -86,7 +86,7 @@ void main() {
     studenti.add(new Student(1025, "Andrei", "Popa", "ISM141/2"));
     studenti.add(new Student(1026, "Anamaria", "Prodan", "TI131/1"));
     studenti.add(new Student(1029, "Bianca", "Popescu", "TI131/1"));
-    String xlsFileName = "laborator8_students.xlsx";
+    String xlsFileName = "src/laborator8_students.xlsx";
     writeToXls(studenti, xlsFileName);
 
     //4.b
