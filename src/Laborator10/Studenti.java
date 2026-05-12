@@ -1,15 +1,19 @@
+package Laborator10;
+
 import java.util.Objects;
 
-public class Student {
-    protected final int nrMatricol;
-    protected final String prenume;
-    protected final String nume;
-    protected final String formatieDeStudiu;
-    public Student(int nrMatricol, String prenume, String nume, String formatieDeStudiu) {
+public class Studenti {
+    protected int nrMatricol;
+    protected String prenume;
+    protected String nume;
+    protected String formatieDeStudiu;
+    protected double nota;
+    public Studenti(int nrMatricol, String prenume, String nume, String formatieDeStudiu, double nota) {
         this.nrMatricol = nrMatricol;
         this.prenume = prenume;
         this.nume = nume;
         this.formatieDeStudiu = formatieDeStudiu;
+        this.nota = nota;
     }
     public int getNrMatricol() {
         return nrMatricol;
@@ -23,6 +27,9 @@ public class Student {
     public String getFormatieDeStudiu() {
         return formatieDeStudiu;
     }
+    public double getNota(){
+        return nota;
+    }
     @Override
     public String toString() {
 
@@ -34,8 +41,8 @@ public class Student {
             return true;
         if (obj == null)
             return false;
-        return this.prenume.equals(((Student)obj).prenume) && this.nume.equals(((Student)obj).nume) &&
-                this.formatieDeStudiu.equals(((Student)obj).formatieDeStudiu);
+        return this.prenume.equals(((Studenti)obj).prenume) && this.nume.equals(((Studenti)obj).nume) &&
+                this.formatieDeStudiu.equals(((Studenti)obj).formatieDeStudiu);
     }
     @Override
     public int hashCode() {
