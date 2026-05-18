@@ -19,7 +19,7 @@ public class AplicatieCuStrategy {
         //a
         IStudentiExport strategyConsole = new StudentiInConsola();
         Exporter exporter = new Exporter();
-       // exporter.startExport(strategyConsole, studenti);
+        exporter.startExport(strategyConsole, studenti);
 
         //b
         String TxtFileName = "src/Laborator10/studentiStrategyText.txt";
