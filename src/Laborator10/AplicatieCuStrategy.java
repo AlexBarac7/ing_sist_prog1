@@ -19,11 +19,25 @@ public class AplicatieCuStrategy {
         //a
         IStudentiExport strategyConsole = new StudentiInConsola();
         Exporter exporter = new Exporter();
-        exporter.startExport(strategyConsole, studenti);
+       // exporter.startExport(strategyConsole, studenti);
 
         //b
-        String fileName = "src/Laborator10/studentiStrategyText.txt";
-        StudentiInFisierText strategyFisierText = new StudentiInFisierText(fileName);
+        String TxtFileName = "src/Laborator10/studentiStrategyText.txt";
+        StudentiInFisierText strategyFisierText = new StudentiInFisierText(TxtFileName);
         exporter.startExport(strategyFisierText, studenti);
+
+        //c
+        String ExcelFileName = "src/Laborator10/studentiStrategyExcel.xlsx";
+        StudentiInFisierXlsx strategyFisierExcel = new StudentiInFisierXlsx(ExcelFileName);
+        exporter.startExport(strategyFisierExcel, studenti);
+
+        //d
+        StudentiDinFisierText IStrategyText = new StudentiDinFisierText();
+        Importer importer = new Importer();
+        importer.startImport(IStrategyText, TxtFileName);
+
+        //e
+        StudentiDinFisierXlsx IStrategyExcel = new StudentiDinFisierXlsx();
+        importer.startImport(IStrategyExcel, ExcelFileName);
     }
 }
