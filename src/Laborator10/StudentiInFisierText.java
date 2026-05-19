@@ -15,8 +15,15 @@ public class StudentiInFisierText implements IStudentiExport{
         try (FileWriter w = new FileWriter(filename))
         {
             w.write("Studenti in fisier text" + "\n");
-            for (Studenti s : studenti)
-                w.write(s.toString() + "\n");
+          //  for (Studenti s : studenti)
+          //      w.write(s.toString() + "\n");
+            studenti.stream().forEach(s->
+            {
+                try {
+                    w.write(s + "\n");
+                }catch (IOException E){
+                }
+            });
         } catch (IOException e) {
             System.out.println("Eroare");
             e.printStackTrace();
